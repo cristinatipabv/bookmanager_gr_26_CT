@@ -1,0 +1,23 @@
+
+<html>
+    <head>
+        <title>My Books List</title>
+    </head>
+    <body>
+<!--    aici am scris un comment-->
+        <h1>Hello, this our selection of books:</h1>
+        <ul>
+<!--            <li>Hello book 1</li>-->
+<!--            <li>Hello book 2</li>-->
+<!--            template jinja -> unealta ptr temp din janga-->
+            {% for book in books %}
+                <li>
+                    {{ book.title }} - {{ book.content }}
+                </li>
+            {% endfor %}
+
+        </ul>
+    </body>
+</html>
+
+
