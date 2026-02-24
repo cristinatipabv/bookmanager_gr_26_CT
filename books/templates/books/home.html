@@ -1,23 +1,28 @@
 
-<html>
-    <head>
-        <title>My Books List</title>
-    </head>
-    <body>
+{% extends "base.html"%}
+
+{% block title %}Books List{% endblock %}
+
+{% block content %}
 <!--    aici am scris un comment-->
         <h1>Hello, this our selection of books:</h1>
         <ul>
-<!--            <li>Hello book 1</li>-->
-<!--            <li>Hello book 2</li>-->
-<!--            template jinja -> unealta ptr temp din janga-->
             {% for book in books %}
                 <li>
-                    {{ book.title }} - {{ book.content }}
+                    {{ book.title }} - {{ book.content }}, by {{ book.author }}
+                    <a href="{% url 'delete_book' book.id %}">Delete</a>
                 </li>
             {% endfor %}
 
         </ul>
-    </body>
-</html>
+{% endblock %}
+
+<!--            <li>Hello book 1</li>-->
+<!--            <li>Hello book 2</li>-->
+<!--            template jinja -> unealta ptr temp din janga-->
+
+
+
+
 
 

@@ -1,15 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Create book</title>
-</head>
-<body>
+{% extends "base.html"%}
+
+{% block title %}Create book{% endblock %}
+
+{% block content %}
   <h1>Book Form</h1>
+
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type = "submit">Save</button>
   </form>
-</body>
-</html>
+{% endblock %}
+
+
+
+
