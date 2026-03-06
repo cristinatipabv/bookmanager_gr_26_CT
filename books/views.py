@@ -40,8 +40,25 @@ def delete_book(request: HttpRequest, pk: int):
     else:
         return render(request, "books/book_confirm_delete.html", {"book": book})
 
-def hello_world(request):
-    return render(request, "books/home.html")
+def update_book(request: HttpRequest, pk: int):
+    # cartea care exista in DB
+    book = get_object_or_404(Book, pk=pk)
+
+    if request.method == "POST":
+        form = BookForm(request.POST, instance=book)
+        if form.is_valid():
+            form.save()
+            return redirect("book_list")
+    else:
+        form = BookForm(instance=book)
+    return render(request, "books/book_form.html", {"form": form})
+
+def check_book_count(request: HttpRequest):
+    count = Book.objects.count()
+    return HttpResponse(count, status=200)
+
+
+
 
         # HttpResponse("Hello World, this is my first web page!")
 

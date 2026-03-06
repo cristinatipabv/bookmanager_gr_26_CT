@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d50ceaa8-aafb-4b8b-bb2f-4ee989605678" name="Changes" comment="addes book view and temp">
-      <change afterPath="$PROJECT_DIR$/books/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/books/templates/books/book_confirm_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/books/static/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/books/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books/templates/books/book_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/books/templates/books/book_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books/templates/books/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/books/templates/books/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/urls.py" afterDir="false" />
@@ -21,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -111,7 +111,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771667740969</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="addes book view and temp">
+      <option name="closed" value="true" />
+      <created>1771959902744</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1771959902744</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
