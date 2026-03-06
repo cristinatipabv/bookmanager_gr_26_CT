@@ -54,11 +54,10 @@ def update_book(request: HttpRequest, pk: int):
     return render(request, "books/book_form.html", {"form": form})
 
 def check_book_count(request: HttpRequest):
+    #count = len(Book.all()) # metoda asta este mai putin eficienta decat Book.objects.count()
     count = Book.objects.count()
-    return HttpResponse(count, status=200)
-
-
-
+    #book_count
+    return render(request, "books/book_count.html", {"book_count": count})
 
         # HttpResponse("Hello World, this is my first web page!")
 
