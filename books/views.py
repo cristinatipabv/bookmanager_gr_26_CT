@@ -17,12 +17,14 @@ def book_list(request: HttpRequest):
 
 def create_book(request: HttpRequest):
     if request.method == "POST":
-        # primi http post cand se apasa pe save
+        # primim http post cand se apasa pe save
 
         form = BookForm(request.POST)
         if form.is_valid():
             #se salveaza in DB
-            form.save()
+            book = form.save(commit=False)
+            book.user = request.user
+            book.save()
             return redirect("book_list")
 
     else:
@@ -31,6 +33,8 @@ def create_book(request: HttpRequest):
         'form': form
     }
     return render(request, "books/book_form.html", context)
+
+
 
 def delete_book(request: HttpRequest, pk: int):
     book = get_object_or_404(Book, pk=pk)
