@@ -4,3 +4,9 @@
     justify-content: space-between;
 
 }
+
+.navigation_bar {
+    display: flex;
+    justify-content: space-between;
+
+}

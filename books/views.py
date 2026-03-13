@@ -1,5 +1,8 @@
+from django.contrib.auth.models import User
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
+
+from accounts.models import CustomUser
 from books.forms import BookForm
 from books.models import Book
 from django.http.request import HttpRequest
@@ -64,6 +67,24 @@ def check_book_count(request: HttpRequest):
     return render(request, "books/book_count.html", {"book_count": count})
 
         # HttpResponse("Hello World, this is my first web page!")
+
+def user_books(request    : HttpRequest, pk: int):
+# pk - id-ul userului
+    user = get_object_or_404(CustomUser, pk=pk)
+    books = user.books.all()
+    return render(request, "books/home.html", {"books": books})
+
+def search_books(request: HttpRequest):
+    q = request.GET.get("q")
+
+    if q is None:
+        books = Book.objects.all()
+    else:
+        books = Book.objects.filter(title__contains=q).all()
+    print(books)
+
+    return render(request, "books/home.html", {"books": books})
+
 
 def simple_endpoint(request):
     return HttpResponse("{ 'content': 'Hello this is my response!'}", status=200)

@@ -11,6 +11,8 @@ urlpatterns = [
     path('check_book_count/', views.check_book_count, name='check_book_count'),
     path('book/<int:pk>/delete/', views.delete_book, name='delete_book'),
     path('book/<int:pk>/update/', views.update_book, name='update_book'),
+    path('user/<int:pk>/books/', views.user_books, name='user_books'),
+    path('search', views.search_books, name='search_books'),
     path('api_simple_endpoint/', views.simple_endpoint, name='simple'),
 
 ]

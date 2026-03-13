@@ -6,14 +6,30 @@
 {% block content %}
 <!--    aici am scris un comment-->
         <h1>Hello, this our selection of books:</h1>
+
+
+        <form action="/search" method="get">
+            <label for="q">Search</label>
+            <input type="text"  id="q" name="q"> <br>
+            <input type="submit" value="Submit" >
+
+
+        </form>
+
         <ul>
             {% for book in books %}
 
                 <li>
                     <details>
-                      <summary class="book_title"  ><span>{{ book.title }}</span><span> by {{ book.author }}</span></summary>
+                      <summary class="book_title"  >
+                          <span>{{ book.title }}</span>
+                          <a href="{% url 'user_books' book.user.id %}">{{ book.user }}</a>
+
+
+                      </summary>
                         <div>
                             {{book.content}}
+                            <p> by {{ book.author }}</p>
                         </div>
                         <a href="{% url 'delete_book' book.id %}">🗑️</a>
                         <a href="{% url 'update_book' book.id %}">✍️️</a>
