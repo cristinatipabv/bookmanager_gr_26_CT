@@ -10,6 +10,11 @@ class Book(models.Model):
     content = models.TextField()
     author = models.CharField(max_length=200, default="No Author")
 
+    image = models.ImageField(upload_to="book_images/",
+                              null=True,
+                              blank=True,
+                              )
+
     # one-to-many relationship
     user = models.ForeignKey(
         CustomUser,

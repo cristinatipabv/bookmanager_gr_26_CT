@@ -23,6 +23,10 @@
                     <details>
                       <summary class="book_title"  >
                           <span>{{ book.title }}</span>
+                          {% if book.image %}
+                            <br>
+                            <img src="{{ book.image.url }}" with="150">
+                          {% endif %}
                           <a href="{% url 'user_books' book.user.id %}">{{ book.user }}</a>
 
 
@@ -45,6 +49,8 @@
 <!--            <li>Hello book 1</li>-->
 <!--            <li>Hello book 2</li>-->
 <!--            template jinja -> unealta ptr temp din janga-->
+
+
 
 
 
