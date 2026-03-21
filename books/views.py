@@ -1,3 +1,4 @@
+import os
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
@@ -58,6 +59,17 @@ def delete_book(request: HttpRequest, pk: int):
     else:
         return render(request, "books/book_confirm_delete.html", {"book": book})
 
+
+def delete_book_image(request: HttpRequest, pk: int):
+    book = get_object_or_404(Book, pk=pk)
+    if request.method == "POST":
+        if book.image is not None:
+            if os.path.isfile(book.image.path):
+                os.remove(book.image.path)
+                book.image=None
+                book.save()
+        return redirect("book_list")
+
 def update_book(request: HttpRequest, pk: int):
     # cartea care exista in DB
     book = get_object_or_404(Book, pk=pk)
@@ -83,7 +95,15 @@ def user_books(request    : HttpRequest, pk: int):
 # pk - id-ul userului
     user = get_object_or_404(CustomUser, pk=pk)
     books = user.books.all()
-    return render(request, "books/home.html", {"books": books})
+
+    paginator = Paginator(books, 5)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    context = {
+        'page_obj': page_obj
+    }
+    return render(request, "books/home.html", context)
 
 def search_books(request: HttpRequest):
     q = request.GET.get("q")
@@ -92,9 +112,16 @@ def search_books(request: HttpRequest):
         books = Book.objects.all()
     else:
         books = Book.objects.filter(title__contains=q).all()
-    print(books)
+    # print(books)
+    paginator = Paginator(books, 5)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
 
-    return render(request, "books/home.html", {"books": books})
+    context = {
+        'page_obj': page_obj
+    }
+
+    return render(request, "books/home.html", context)
 
 
 def simple_endpoint(request):

@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d50ceaa8-aafb-4b8b-bb2f-4ee989605678" name="Changes" comment="files">
+    <list default="true" id="d50ceaa8-aafb-4b8b-bb2f-4ee989605678" name="Changes" comment="add pages number">
+      <change afterPath="$PROJECT_DIR$/books/signals.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/apps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books/templates/books/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/books/templates/books/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -271,7 +274,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773769534831</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add pages number">
+      <option name="closed" value="true" />
+      <created>1773772724663</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1773772724663</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -294,6 +305,7 @@
     <MESSAGE value="added pytest and wrote a few tests for app" />
     <MESSAGE value="add image for book" />
     <MESSAGE value="files" />
-    <option name="LAST_COMMIT_MESSAGE" value="files" />
+    <MESSAGE value="add pages number" />
+    <option name="LAST_COMMIT_MESSAGE" value="add pages number" />
   </component>
 </project>
