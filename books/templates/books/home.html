@@ -37,11 +37,13 @@
                         </div>
                         <a href="{% url 'delete_book' book.id %}">🗑️</a>
                         <a href="{% url 'update_book' book.id %}">✍️️</a>
+                        {% if book.image.name %}
+                            <form method="post" action="{% url 'delete_book_image' book.id %}">
+                                {% csrf_token %}
+                                <button type = "submit">Delete Image</button>
+                            </form>
+                        {% endif%}
 
-                        <form method="post" action="{% url 'delete_book_image' book.id %}">
-                            {% csrf_token %}
-                            <button type = "submit">Delete Image</button>
-                        </form>
 
 
                     </details>

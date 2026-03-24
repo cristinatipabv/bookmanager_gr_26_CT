@@ -17,8 +17,8 @@ from django.core.paginator import Paginator
 def book_list(request: HttpRequest):
     #accesam db, extragem cartile si le afisam pe pagina html
     # Book.objects.all() => query set api reference (potentialele intrari din DB)
-    books = Book.objects.all()
-
+    books = Book.objects.all().order_by("-pk")
+    # books = Book.objects.all().order_by("-pk") => -pk descendent sau -id
     paginator = Paginator(books, 5)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
@@ -94,7 +94,7 @@ def check_book_count(request: HttpRequest):
 def user_books(request    : HttpRequest, pk: int):
 # pk - id-ul userului
     user = get_object_or_404(CustomUser, pk=pk)
-    books = user.books.all()
+    books = user.books.all().order_by("-pk")
 
     paginator = Paginator(books, 5)
     page_number = request.GET.get('page')
@@ -109,7 +109,7 @@ def search_books(request: HttpRequest):
     q = request.GET.get("q")
 
     if q is None:
-        books = Book.objects.all()
+        books = Book.objects.all().order_by("-pk")
     else:
         books = Book.objects.filter(title__contains=q).all()
     # print(books)

@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d50ceaa8-aafb-4b8b-bb2f-4ee989605678" name="Changes" comment="add pages number">
-      <change afterPath="$PROJECT_DIR$/books/signals.py" afterDir="false" />
+    <list default="true" id="d50ceaa8-aafb-4b8b-bb2f-4ee989605678" name="Changes" comment="func delete images">
+      <change afterPath="$PROJECT_DIR$/regular_coding/02_debugging.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/regular_coding/03_properties.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/books/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/accounts/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/accounts/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/signals.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books/templates/books/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/books/templates/books/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/books/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,27 +52,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python tests.Python tests for books.tests.test_models.test_book_creation.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for books.tests.test_models.test_book_creation_with_user.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for books.tests.test_views.test_book_create.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for books.tests.test_views.test_book_delete.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for books.tests.test_views.test_book_update.executor&quot;: &quot;Run&quot;,
-    &quot;Python.01_decorators.executor&quot;: &quot;Run&quot;,
-    &quot;Python.admin.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/playground/bookmanager_gr_26/books/templates/books&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python tests.Python tests for books.tests.test_models.test_book_creation.executor": "Run",
+    "Python tests.Python tests for books.tests.test_models.test_book_creation_with_user.executor": "Run",
+    "Python tests.Python tests for books.tests.test_views.test_book_create.executor": "Run",
+    "Python tests.Python tests for books.tests.test_views.test_book_delete.executor": "Run",
+    "Python tests.Python tests for books.tests.test_views.test_book_update.executor": "Run",
+    "Python.01_decorators.executor": "Run",
+    "Python.02_debugging.executor": "Run",
+    "Python.03_properties.executor": "Run",
+    "Python.Start Server.executor": "Run",
+    "Python.admin.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/playground/bookmanager_gr_26/books/templates/books",
+    "to.speed.mode.migration.done": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\playground\bookmanager_gr_26\books\templates\books" />
@@ -80,37 +84,76 @@
       <recent name="C:\playground\bookmanager_gr_26\books\templates\books" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for books.tests.test_views.test_book_update">
-    <configuration name="Python tests for books.tests.test_models.test_book_creation" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.Start Server">
+    <configuration name="02_debugging" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bookmanager_gr_26" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/regular_coding" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="RUN_TOOL" value="" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;books.tests.test_models.test_book_creation&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/regular_coding/02_debugging.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for books.tests.test_models.test_book_creation_with_user" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="03_properties" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bookmanager_gr_26" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/regular_coding" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="RUN_TOOL" value="" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;books.tests.test_models.test_book_creation_with_user&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/regular_coding/03_properties.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Start Server" type="PythonConfigurationType" factoryName="Python">
+      <module name="bookmanager_gr_26" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name=" DJANGO_SETTINGS_MODULE" value="bookmanager.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.14 (bookmanager_gr_26)" />
+      <option name="WORKING_DIRECTORY" value="C:\playground\bookmanager_gr_26" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
+      <option name="PARAMETERS" value="runserver" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests for books.tests.test_views.test_book_create" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -161,13 +204,21 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.Start Server" />
+      <item itemvalue="Python.03_properties" />
+      <item itemvalue="Python.02_debugging" />
+      <item itemvalue="Python tests.Python tests for books.tests.test_views.test_book_create" />
+      <item itemvalue="Python tests.Python tests for books.tests.test_views.test_book_delete" />
+      <item itemvalue="Python tests.Python tests for books.tests.test_views.test_book_update" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.03_properties" />
+        <item itemvalue="Python.02_debugging" />
         <item itemvalue="Python tests.Python tests for books.tests.test_views.test_book_update" />
         <item itemvalue="Python tests.Python tests for books.tests.test_views.test_book_delete" />
         <item itemvalue="Python tests.Python tests for books.tests.test_views.test_book_create" />
-        <item itemvalue="Python tests.Python tests for books.tests.test_models.test_book_creation_with_user" />
-        <item itemvalue="Python tests.Python tests for books.tests.test_models.test_book_creation" />
       </list>
     </recent_temporary>
   </component>
@@ -282,7 +333,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773772724663</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="func delete images">
+      <option name="closed" value="true" />
+      <created>1774087337752</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1774087337752</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -306,6 +365,7 @@
     <MESSAGE value="add image for book" />
     <MESSAGE value="files" />
     <MESSAGE value="add pages number" />
-    <option name="LAST_COMMIT_MESSAGE" value="add pages number" />
+    <MESSAGE value="func delete images" />
+    <option name="LAST_COMMIT_MESSAGE" value="func delete images" />
   </component>
 </project>
