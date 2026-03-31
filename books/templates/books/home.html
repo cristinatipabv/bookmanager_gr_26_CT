@@ -8,45 +8,44 @@
         <h1>Hello, this our selection of books:</h1>
 
 
-        <form action="/search" method="get">
+        <form class='search_bar' action="/search" method="get">
             <label for="q">Search</label>
-            <input type="text"  id="q" name="q"> <br>
+            <input type="text"  id="q" name="q">
             <input type="submit" value="Submit" >
 
 
         </form>
 
-        <ul>
+        <ul class='book_container'>
             {% for book in page_obj %}
 
-                <li>
-                    <details>
-                      <summary class="book_title"  >
-                          <span>{{ book.title }}</span>
-                          {% if book.image %}
+                <li class="book_card">
+                    <div class="book_title">{{ book.title }}</div>
+                    <div class="book_image_container">
+                        {% if book.image %}
                             <br>
-                            <img src="{{ book.image.url }}" width="200"%>
-                          {% endif %}
-                          <a href="{% url 'user_books' book.user.id %}">{{ book.user }}</a>
-
-
-                      </summary>
-                        <div>
+                            <img class="book_image" src="{{ book.image.url }}""%>
+                        {% endif %}</div>
+                    <div class="book_content">
                             {{book.content}}
                             <p> by {{ book.author }}</p>
+                    </div>
+                    <div class="book_actions">
+                        <a href="{% url 'user_books' book.user.id %}">{{ book.user }}</a>
+
+                        <div class="book_actions_buttons">
+                                <a href="{% url 'delete_book' book.id %}">🗑️</a>
+                                <a href="{% url 'update_book' book.id %}">✍️️</a>
+                                {% if book.image.name %}
+                                    <form method="post" action="{% url 'delete_book_image' book.id %}">
+                                        {% csrf_token %}
+                                        <button type = "submit">Delete Image</button>
+                                    </form>
+                                {% endif%}
                         </div>
-                        <a href="{% url 'delete_book' book.id %}">🗑️</a>
-                        <a href="{% url 'update_book' book.id %}">✍️️</a>
-                        {% if book.image.name %}
-                            <form method="post" action="{% url 'delete_book_image' book.id %}">
-                                {% csrf_token %}
-                                <button type = "submit">Delete Image</button>
-                            </form>
-                        {% endif%}
 
+                    </div>
 
-
-                    </details>
 
                 </li>
             {% empty %}
