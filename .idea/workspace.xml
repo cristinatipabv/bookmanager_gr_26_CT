@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d50ceaa8-aafb-4b8b-bb2f-4ee989605678" name="Changes" comment="iterators">
+    <list default="true" id="d50ceaa8-aafb-4b8b-bb2f-4ee989605678" name="Changes" comment="update styles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books/static/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/books/static/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/books/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books/templates/books/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/books/templates/books/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -361,7 +362,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774692104690</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="update styles">
+      <option name="closed" value="true" />
+      <created>1774979770648</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1774979770648</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -388,6 +397,7 @@
     <MESSAGE value="func delete images" />
     <MESSAGE value="modificare register si rezolvare incidente" />
     <MESSAGE value="iterators" />
-    <option name="LAST_COMMIT_MESSAGE" value="iterators" />
+    <MESSAGE value="update styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="update styles" />
   </component>
 </project>
